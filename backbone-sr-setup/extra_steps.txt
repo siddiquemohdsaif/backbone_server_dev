@@ -1,0 +1,26 @@
+
+# Disabling Unattended-Upgrades
+* Stop the service: `sudo systemctl stop unattended-upgrades`
+* Disable the service: `sudo systemctl disable unattended-upgrades`
+
+# Disabling PackageKit
+* Stop the service: `sudo systemctl stop packagekit`
+* Disable the service: `sudo systemctl disable packagekit`
+
+# Manual Updates
+After disabling these services, you'll need to manually check for and apply updates. You can do this using the following commands:
+
+## Update package lists:
+* `sudo apt-get update`
+
+## Upgrade packages:
+* `sudo apt-get upgrade`
+
+## Optionally, upgrade the distribution:
+* `sudo apt-get dist-upgrade`
+
+# Considerations
+* **Security Risks**: Regular updates are crucial for security. Disabling automatic updates means you need to be diligent about manually updating your system to protect against vulnerabilities.
+* **Update Frequency**: Decide on a regular schedule for manual updates to ensure your system doesn't fall behind on critical security patches.
+* **Monitoring**: Keep an eye on Ubuntu security bulletins or subscribe to mailing lists to stay informed about important updates.
+* **Convenience vs. Control**: Automatic updates offer convenience and security, but manual updates provide more control over when and what gets updated, which can be important in certain environments.

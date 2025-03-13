@@ -1,0 +1,11 @@
+
+1) CREATE DROPLET : name=game-sr-x ( password:cxroyal2@Lion , region:SGP1 , linux:Ubuntu 20.04 (LTS) x64 )
+
+2) Initial Info like : System load:  0.01              Users logged in:       0
+                       Usage of /:   6.4% of 24.05GB   IPv4 address for eth0: 139.59.113.45
+                       Memory usage: 22%               IPv4 address for eth0: 10.15.0.9
+                       Swap usage:   0%                IPv4 address for eth1: 10.104.0.6
+                       Processes:    104
+
+
+3) do: setup-pm2-nodeApp.txt

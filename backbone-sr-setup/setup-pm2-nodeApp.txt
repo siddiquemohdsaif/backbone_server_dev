@@ -1,0 +1,47 @@
+Setup node-mongo firestore database using pm2 and node at localhost:3000 also config server block
+
+1) install nodejs 
+   
+ (1) sudo apt update
+
+ (2) sudo apt install nodejs npm
+
+ (3) sudo npm install -g n
+
+ (4) sudo n 18.16.1  , sudo apt remove nodejs npm
+
+ (5) node -v
+
+ (6) npm -v
+
+
+2) install rar
+
+ (1) sudo apt install unrar
+
+
+3) install redis
+
+ (1) sudo apt update
+
+ (2) sudo apt install redis-server
+
+ (3) sudo nano /etc/redis/redis.conf , change => supervised systemd
+
+ (4) sudo systemctl restart redis-server
+
+ (5) sudo systemctl enable redis-server
+
+ (6) sudo systemctl status redis-server , redis-cli , 127.0.0.1:6379> ping => PONG
+
+
+
+4) install pm2 and and stat app
+
+ (1) sudo npm install pm2@latest -g
+ (2) upload node file to server and go the that file => /node/...(backboneServer folder) , cd /node/backboneServer/
+ (3) pm2 start server.js --name backboneServer, pm2 start server2.js --name backboneServer2 , ...
+ (4) pm2 save
+ (5) pm2 startup systemd
+
+
