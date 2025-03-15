@@ -2,7 +2,7 @@ const WebSocket = require('ws');
 const WebSocketHandler = require('./WebSocketHandler');
 
 // Initializing WebSocket server
-const wss = new WebSocket.Server({ port: 13999 });
+const wss = new WebSocket.Server({ port: 13999+100 });
 
 // Initializing WebSocket handler
 const webSocketHandler = new WebSocketHandler(wss);
